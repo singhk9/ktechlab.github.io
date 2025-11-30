@@ -1,246 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>AARK Innovations — Recipes & Baking Studio</title>
-  <meta name="description" content="AA.RK — beautiful step-by-step recipes, timers, and baking guides." />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Recipes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+    <!-- Header -->
+    <header>
+        <div class="logo">🍲 Delicious Recipes</div>
+        <nav>
+            <ul>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- NAV -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <svg viewBox="0 0 24 24" aria-hidden class="logo-mark"><path d="M12 2c1.7 0 3.2.9 4 2.3C17.8 4.7 19.5 5 21 5v2c-1.7 0-3.2.9-4 2.3C15.2 10.7 13.5 11 12 11s-3.2-.3-5-1.7C6.2 8.9 4.7 8 3 8V6c1.5 0 3.2-.3 5-1.7C8.8 2.9 10.3 2 12 2z"></path></svg>
-        <span class="brand-text">AA.RK</span>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover Amazing Recipes</h1>
+        <p>Cook delicious meals at home with easy-to-follow recipes!</p>
+    </section>
 
-      <nav class="nav" aria-label="Main navigation">
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#recipes">Recipes</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a class="btn small" href="#pricing">Get Started</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO / PROMO -->
-  <main id="main">
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content animate-up">
-          <p class="eyebrow">New</p>
-          <h1>AA.RK — Recipes & Baking Studio</h1>
-          <p class="lead">Beautiful step-by-step guided recipes, smart timers, technique videos, and personalized baking plans — all in one simple app.</p>
-          <div class="hero-ctas">
-            <a class="btn" href="#pricing">Start Free</a>
-            <a class="btn ghost" href="#features">See Features</a>
-          </div>
-          <ul class="trust-row" aria-hidden>
-            <li>2000+ recipes</li>
-            <li>Smart timers</li>
-            <li>Chef-verified</li>
-          </ul>
-        </div>
-
-        <!-- PRODUCT MOCKUP -->
-        <div class="hero-mockup animate-up delay">
-          <!-- A simple recipe phone mockup using SVG + placeholder content.
-               Replace the rectangle content or swap with an actual PNG named "mockup.png". -->
-          <div class="device">
-            <div class="device-screen">
-              <header class="recipe-top">
-                <div class="avatar"></div>
-                <div class="title-block">
-                  <div class="r-title">Sourdough Starter</div>
-                  <div class="r-sub">45 min • Beginner</div>
-                </div>
-              </header>
-
-              <div class="steps">
-                <div class="step s1"><strong>1.</strong> Mix flour & water — 5 min</div>
-                <div class="step s2"><strong>2.</strong> Rest — 20 min</div>
-                <div class="step s3"><strong>3.</strong> Bake — 20 min</div>
-              </div>
-
-              <div class="mockup-footer">
-                <button class="chip">Start Timer</button>
-                <button class="chip ghost">Save</button>
-              </div>
+    <!-- Recipes Section -->
+    <section id="recipes">
+        <h2>Our Top Recipes</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <img src="images/pasta.jpg" alt="Pasta">
+                <h3>Creamy Pasta</h3>
+                <p>A rich and creamy pasta recipe perfect for dinner.</p>
+                <button onclick="viewRecipe('Creamy Pasta')">View Recipe</button>
             </div>
-          </div>
+            <div class="recipe-card">
+                <img src="images/pancakes.jpg" alt="Pancakes">
+                <h3>Fluffy Pancakes</h3>
+                <p>Start your day with light and fluffy pancakes.</p>
+                <button onclick="viewRecipe('Fluffy Pancakes')">View Recipe</button>
+            </div>
+            <div class="recipe-card">
+                <img src="images/salad.jpg" alt="Salad">
+                <h3>Fresh Salad</h3>
+                <p>A healthy salad packed with nutrients and flavor.</p>
+                <button onclick="viewRecipe('Fresh Salad')">View Recipe</button>
+            </div>
         </div>
-      </div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="section features">
-      <div class="container">
-        <h2 class="animate-up">Features designed for bakers</h2>
-        <p class="subtle animate-up delay">From precise timers to technique videos — everything crafted for consistent results.</p>
-
-        <div class="features-grid">
-          <article class="feature-card animate-up">
-            <h3>Guided Steps</h3>
-            <p>Clear, timed steps with progress indicators so you never miss a fold or proof.</p>
-          </article>
-
-          <article class="feature-card animate-up delay">
-            <h3>Smart Timers</h3>
-            <p>Auto-adjusting timers that adapt to your recipe and altitude.</p>
-          </article>
-
-          <article class="feature-card animate-up delay-2">
-            <h3>Technique Videos</h3>
-            <p>Short clips from chefs showing kneading, scoring, and tempering techniques.</p>
-          </article>
-
-          <article class="feature-card animate-up delay-3">
-            <h3>Personalized Plans</h3>
-            <p>Weekly plans and shopping lists tailored to your skill level and schedule.</p>
-          </article>
-        </div>
-      </div>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We share the best home-cooked recipes that are easy, healthy, and delicious. Our goal is to make cooking fun for everyone.</p>
     </section>
 
-    <!-- RECIPES HIGHLIGHT -->
-    <section id="recipes" class="section recipes">
-      <div class="container">
-        <h2 class="animate-up">Recipes you'll love</h2>
-        <p class="subtle animate-up delay">Hand-curated collections for every occasion.</p>
-
-        <div class="recipe-row">
-          <figure class="recipe-card animate-up">
-            <div class="img-placeholder">🍞</div>
-            <figcaption>
-              <strong>Sourdough Loaf</strong>
-              <span>Beginner • 3 hr</span>
-            </figcaption>
-          </figure>
-
-          <figure class="recipe-card animate-up delay">
-            <div class="img-placeholder">🧁</div>
-            <figcaption>
-              <strong>Vanilla Cupcakes</strong>
-              <span>Easy • 1 hr</span>
-            </figcaption>
-          </figure>
-
-          <figure class="recipe-card animate-up delay-2">
-            <div class="img-placeholder">🥐</div>
-            <figcaption>
-              <strong>Buttery Croissants</strong>
-              <span>Advanced • 2 days</span>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section id="pricing" class="section pricing">
-      <div class="container">
-        <h2 class="animate-up">Simple pricing</h2>
-        <p class="subtle animate-up delay">Start free. Upgrade for pro features and chef content.</p>
-
-        <div class="pricing-grid">
-          <div class="plan animate-up">
-            <h3>Free</h3>
-            <p class="price">$0</p>
-            <ul>
-              <li>Access to 2000+ recipes</li>
-              <li>Basic timers</li>
-              <li>Community support</li>
-            </ul>
-            <a class="btn small" href="#contact">Join Free</a>
-          </div>
-
-          <div class="plan highlight animate-up delay">
-            <h3>Pro</h3>
-            <p class="price">$6 / mo</p>
-            <ul>
-              <li>Chef videos</li>
-              <li>Smart timers & personalization</li>
-              <li>Offline mode</li>
-            </ul>
-            <a class="btn small" href="#contact">Start Pro</a>
-          </div>
-
-          <div class="plan animate-up delay-2">
-            <h3>Studio</h3>
-            <p class="price">$18 / mo</p>
-            <ul>
-              <li>Team sharing</li>
-              <li>Priority support</li>
-              <li>Custom lesson plans</li>
-            </ul>
-            <a class="btn small" href="#contact">Get Studio</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section testimonials">
-      <div class="container">
-        <h2 class="animate-up">Loved by home bakers</h2>
-        <div class="test-row">
-          <blockquote class="test-card animate-up">
-            <p>“AA.RK finally got my sourdough consistent. The timers are perfect.”</p>
-            <footer>— Priya, Home Baker</footer>
-          </blockquote>
-
-          <blockquote class="test-card animate-up delay">
-            <p>“The technique videos changed how I fold dough. Professional quality.”</p>
-            <footer>— Tomas, Pastry Student</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2 class="animate-up">Get in touch</h2>
-        <p class="subtle animate-up delay">Questions, press, or chef collaborations — we'd love to hear from you.</p>
-
-        <form id="contactForm" class="contact-form animate-up delay-2" novalidate>
-          <div class="form-row">
-            <input name="name" type="text" placeholder="Your name" required />
-            <input name="email" type="email" placeholder="Email" required />
-          </div>
-          <textarea name="message" placeholder="Tell us a bit..." required></textarea>
-          <div class="form-actions">
-            <button class="btn" type="submit">Send message</button>
-            <a class="link" href="mailto:hello@AA.RK.example">Or email: hello@AA.RK.example</a>
-          </div>
-          <p id="formMessage" class="form-msg" aria-live="polite"></p>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
         </form>
-      </div>
     </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> AA.RK</div>
-      <nav>
-        <a href="#">Terms</a>
-        <a href="#">Privacy</a>
-        <a href="#">Support</a>
-      </nav>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Delicious Recipes. All rights reserved.</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
