@@ -1,154 +1,153 @@
-/* Apple-style: clean, airy, soft shadows, generous spacing */
-:root{
-  --bg:#fbfbfd;
-  --card:#ffffff;
-  --muted:#6b6b76;
-  --accent:#0a84ff; /* iOS blue-ish */
-  --glass: rgba(255,255,255,0.65);
-  --radius:14px;
-  --max:1100px;
-  --container-gap:24px;
-  --shadow: 0 6px 20px rgba(12,16,30,0.08);
-  --trans: 320ms cubic-bezier(.2,.9,.3,1);
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:var(--bg);
-  color:#111;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.45;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* small utility */
-.container{max-width:var(--max);margin:0 auto;padding:0 20px}
-.skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-
-/* BRAND */
-.brand{display:flex;align-items:center;gap:10px}
-.logo-mark{width:34px;height:34px;fill:var(--accent)}
-.brand-text{font-weight:600;letter-spacing:0.2px}
-
-/* NAV */
-.nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
-.nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
-.header-actions .btn.small{padding:8px 12px;border-radius:9px}
-
-/* BUTTONS */
-.btn{
-  background:var(--accent);
-  color:white;
-  padding:14px 20px;
-  border-radius:12px;
-  text-decoration:none;
-  display:inline-block;
-  font-weight:700;
-  transition:transform var(--trans),box-shadow var(--trans);
-  box-shadow:0 8px 24px rgba(10,132,255,0.12);
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #ff6347; /* Tomato */
+    color: white;
 }
-.btn:hover{transform:translateY(-4px)}
-.btn.ghost, .btn.ghost:link{background:transparent;color:var(--accent);border:1px solid rgba(10,132,255,0.12)}
-.btn.small{padding:8px 12px;font-size:14px}
 
-/* HERO */
-.hero{padding:64px 0 40px}
-.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center}
-.eyebrow{color:var(--accent);font-weight:700;margin-bottom:10px}
-h1{font-size:44px;line-height:1.02;margin:0 0 12px;font-weight:800}
-.lead{color:var(--muted);font-size:18px;margin-bottom:18px}
-.hero-ctas{display:flex;gap:12px;align-items:center}
-.trust-row{display:flex;gap:18px;color:var(--muted);margin-top:18px;font-weight:600}
-
-/* DEVICE MOCKUP */
-.device{
-  width:360px;
-  border-radius:34px;
-  background:linear-gradient(180deg,#fff,#f7f9fb);
-  padding:18px;
-  box-shadow:var(--shadow);
-  border:1px solid rgba(15,20,30,0.04);
+header .logo {
+    font-size: 1.8em;
+    font-weight: bold;
 }
-.device-screen{
-  background:linear-gradient(180deg,#ffffff, #fbfdff);
-  border-radius:20px;
-  padding:14px;
-  min-height:520px;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
+
+header nav ul {
+    display: flex;
+    list-style: none;
 }
-.recipe-top{display:flex;align-items:center;gap:12px}
-.avatar{width:48px;height:48px;background:linear-gradient(135deg,#ffd1a9,#ffb4b4);border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.06)}
-.r-title{font-weight:700}
-.r-sub{color:var(--muted);font-size:13px}
-.steps{flex:1;display:flex;flex-direction:column;gap:10px;margin-top:10px}
-.step{padding:12px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfbff);border:1px solid rgba(15,20,30,0.03)}
-.mockup-footer{display:flex;gap:10px;align-items:center;justify-content:flex-start;margin-top:12px}
-.chip{padding:8px 12px;border-radius:12px;border:none;background:var(--accent);color:#fff;font-weight:700}
-.chip.ghost{background:transparent;border:1px solid rgba(15,20,30,0.06);color:var(--muted)}
 
-/* SECTIONS */
-.section{padding:56px 0}
-h2{font-size:28px;margin:0 0 8px;text-align:center}
-.subtle{color:var(--muted);text-align:center;margin-bottom:28px}
-
-/* FEATURES GRID */
-.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:980px;margin:18px auto 0}
-.feature-card{background:var(--card);padding:20px;border-radius:14px;box-shadow:var(--shadow);border:1px solid rgba(15,20,30,0.03)}
-.feature-card h3{margin:0 0 8px}
-
-/* RECIPE ROW */
-.recipe-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-.recipe-card{width:220px;background:linear-gradient(180deg,#fff,#fcfcfd);border-radius:14px;padding:18px;text-align:left;box-shadow:var(--shadow);border:1px solid rgba(15,20,30,0.03)}
-.img-placeholder{height:120px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:48px}
-
-/* PRICING */
-.pricing-grid{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-.plan{background:var(--card);padding:22px;border-radius:14px;min-width:220px;box-shadow:var(--shadow);text-align:center;border:1px solid rgba(15,20,30,0.03)}
-.plan .price{font-size:22px;font-weight:800;margin:10px 0}
-.highlight{border:2px solid rgba(10,132,255,0.12)}
-
-/* TESTIMONIALS */
-.test-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:18px}
-.test-card{background:linear-gradient(180deg,#fff,#fbfcff);padding:18px;border-radius:12px;box-shadow:var(--shadow);min-width:260px}
-
-/* CONTACT */
-.contact-form{max-width:820px;margin:20px auto 0;display:flex;flex-direction:column;gap:12px}
-.form-row{display:flex;gap:12px}
-input,textarea{
-  border-radius:12px;border:1px solid rgba(15,20,30,0.06);padding:12px;font-size:15px;background:white
+header nav ul li {
+    margin-left: 25px;
 }
-textarea{min-height:120px}
-.form-actions{display:flex;gap:12px;align-items:center}
-.form-msg{color:green;margin-top:8px}
 
-/* FOOTER */
-.site-footer{padding:22px 0;background:transparent;color:var(--muted)}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px}
-
-/* ANIMATIONS */
-.animate-up{opacity:0;transform:translateY(18px);transition:opacity var(--trans),transform var(--trans)}
-.animate-up.delay{transition-delay:120ms}
-.animate-up.delay-2{transition-delay:220ms}
-.animate-up.delay-3{transition-delay:320ms}
-
-/* responsive */
-@media (max-width:1000px){
-  .hero-grid{grid-template-columns:1fr 360px}
-  .features-grid{grid-template-columns:1fr}
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
 }
-@media (max-width:760px){
-  .nav ul{display:none}
-  .header-inner{gap:12px}
-  .hero-grid{grid-template-columns:1fr;gap:28px;padding-bottom:0}
-  h1{font-size:32px}
-  .device{width:320px}
-  .form-row{flex-direction:column}
-  .footer-inner{flex-direction:column;gap:10px}
-  .trust-row{display:none}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+/* Recipes */
+section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.recipe-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    margin: 15px;
+}
+
+.recipe-card p {
+    margin: 0 15px 15px 15px;
+}
+
+.recipe-card button {
+    margin: 0 15px 15px 15px;
+    padding: 10px 15px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.recipe-card button:hover {
+    background-color: #e5533d;
+}
+
+/* About and Contact */
+#about, #contact {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact input, #contact textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #e5533d;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
